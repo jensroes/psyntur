@@ -16,7 +16,7 @@ Installation
 
 You can install the development version of `psyntur` using `devtools`:
 
-    devtools::install_github("https://github.com/mark-andrews/psyntur.git", upgrade = "never")
+    devtools::install_github(repo="mark-andrews/psyntur")
 
 If `devtools` is not available, install it with
 `install.packages('devtools')`.
@@ -27,9 +27,13 @@ Documentation
 Vignettes explaining the main functions provides by `psyntur` are as
 follows:
 
--   Simple data visualization
--   Simple data exploration
--   Some helper functions for statistical analysis
+-   [Simple data
+    visualization](https://mark-andrews.github.io/psyntur/articles/visualization.html)
+-   [Simple data
+    exploration](https://mark-andrews.github.io/psyntur/articles/exploration.html)
+-   [Some helper functions for statistical
+    analysis](https://mark-andrews.github.io/psyntur/articles/simplestats.html)
 
-In addition, all functions and data sets are listed here, each with
-links to their help pages.
+In addition, all functions and data sets are listed
+[here](https://mark-andrews.github.io/psyntur/reference/index.html),
+each with links to their help pages.
