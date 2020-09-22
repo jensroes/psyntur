@@ -105,6 +105,19 @@
 <p>If <code>devtools</code> is not available, install it with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages('devtools')</a></code>.</p>
 <p>The source code is available here: <a href="https://github.com/mark-andrews/psyntur" class="uri">https://github.com/mark-andrews/psyntur</a>.</p>
 </div>
+<div id="examples" class="section level1">
+<h1 class="hasAnchor">
+<a href="#examples" class="anchor"></a>Examples</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">library</span>(psyntur)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="kw">tukeyboxplot</span>(<span class="dt">y =</span> time, <span class="dt">x=</span> task, <span class="dt">data =</span> vizverb, <span class="dt">by =</span> response)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-3-1.png" width="67%"></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">shapiro_test</span>(time, <span class="dt">by =</span> task, <span class="dt">data =</span> vizverb)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="co">#&gt; # A tibble: 2 x 3</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="co">#&gt;   task   statistic  p_value</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co">#&gt;   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="co">#&gt; 1 verbal     0.861 0.000168</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co">#&gt; 2 visual     0.914 0.00512</span></span></code></pre></div>
+</div>
 <div id="documentation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#documentation" class="anchor"></a>Documentation</h1>

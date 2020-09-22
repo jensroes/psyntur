@@ -24,6 +24,21 @@ If `devtools` is not available, install it with
 The source code is available here:
 <a href="https://github.com/mark-andrews/psyntur" class="uri">https://github.com/mark-andrews/psyntur</a>.
 
+Examples
+========
+
+    library(psyntur)
+    tukeyboxplot(y = time, x= task, data = vizverb, by = response)
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="67%" />
+
+    shapiro_test(time, by = task, data = vizverb)
+    #> # A tibble: 2 x 3
+    #>   task   statistic  p_value
+    #>   <chr>      <dbl>    <dbl>
+    #> 1 verbal     0.861 0.000168
+    #> 2 visual     0.914 0.00512
+
 Documentation
 =============
 

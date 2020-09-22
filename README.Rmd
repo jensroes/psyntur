@@ -31,6 +31,15 @@ If `devtools` is not available, install it with `install.packages('devtools')`.
 
 The source code is available here: https://github.com/mark-andrews/psyntur. 
 
+# Examples
+
+```{r, out.width = "67%"}
+library(psyntur)
+tukeyboxplot(y = time, x= task, data = vizverb, by = response)
+shapiro_test(time, by = task, data = vizverb)
+```
+
+
 # Documentation
 
 Vignettes explaining the main functions provides by `psyntur` are as follows:
