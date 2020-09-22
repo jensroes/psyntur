@@ -25,9 +25,11 @@ The goal of `psyntur` is primarily to provide some functions and data-sets that 
 You can install the development version of `psyntur` using `devtools`:
 
 ```{r, eval = FALSE}
-devtools::install_github(repo="mark-andrews/psyntur")
+devtools::install_github("mark-andrews/psyntur")
 ```
 If `devtools` is not available, install it with `install.packages('devtools')`.
+
+The source code is available here: https://github.com/mark-andrews/psyntur. 
 
 # Documentation
 

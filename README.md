@@ -16,10 +16,13 @@ Installation
 
 You can install the development version of `psyntur` using `devtools`:
 
-    devtools::install_github(repo="mark-andrews/psyntur")
+    devtools::install_github("mark-andrews/psyntur")
 
 If `devtools` is not available, install it with
 `install.packages('devtools')`.
+
+The source code is available here:
+<a href="https://github.com/mark-andrews/psyntur" class="uri">https://github.com/mark-andrews/psyntur</a>.
 
 Documentation
 =============
