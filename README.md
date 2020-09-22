@@ -28,7 +28,7 @@ Examples
 ========
 
     library(psyntur)
-    tukeyboxplot(y = time, x= task, data = vizverb, by = response)
+    tukeyboxplot(y = time, x = task, data = vizverb, by = response)
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="67%" />
 

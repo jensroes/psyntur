@@ -35,7 +35,7 @@ The source code is available here: https://github.com/mark-andrews/psyntur.
 
 ```{r, out.width = "67%"}
 library(psyntur)
-tukeyboxplot(y = time, x= task, data = vizverb, by = response)
+tukeyboxplot(y = time, x = task, data = vizverb, by = response)
 shapiro_test(time, by = task, data = vizverb)
 ```
 
