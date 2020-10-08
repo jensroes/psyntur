@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pairwise t-test — pairwise_t_test • psyntur</title>
+<title>Anthropometric data from US Army Personnel — ansur • psyntur</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,10 +46,8 @@
 
 
 
-<meta property="og:title" content="Pairwise t-test — pairwise_t_test" />
-<meta property="og:description" content="This is wrapper to the pairwise.t.test function. The p-value adjustment is
-&quot;bonferroni&quot; by default. Other possible values are &quot;holm&quot;, &quot;hochberg&quot;,
-&quot;hommel&quot;, &quot;BH&quot;, &quot;BY&quot;, &quot;fdr&quot;, &quot;none&quot;. See stats::p.adjust()." />
+<meta property="og:title" content="Anthropometric data from US Army Personnel — ansur" />
+<meta property="og:description" content="Data on the height, weight, handedness from men and women of different ages and different races." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -134,56 +132,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Pairwise t-test</h1>
+    <h1>Anthropometric data from US Army Personnel</h1>
     
-    <div class="hidden name"><code>pairwise_t_test.Rd</code></div>
+    <div class="hidden name"><code>ansur.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This is wrapper to the <code>pairwise.t.test</code> function. The p-value adjustment is
-"bonferroni" by default. Other possible values are "holm", "hochberg",
-"hommel", "BH", "BY", "fdr", "none". See <code><a href='https://rdrr.io/r/stats/p.adjust.html'>stats::p.adjust()</a></code>.</p>
+    <p>Data on the height, weight, handedness from men and women of different ages and different races.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pairwise_t_test</span><span class='op'>(</span><span class='va'>formula</span>, <span class='va'>data</span>, p_adj <span class='op'>=</span> <span class='st'>"bonferroni"</span><span class='op'>)</span></pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>formula</th>
-      <td><p>A two sided formula with one variable on either side, e.g. y ~
-x, where the left hand side, dependent, variable is a numeric variable in
-<code>data</code> and the right hand side, independent, variable is a categorical or
-factor variable in <code>data</code>.</p></td>
-    </tr>
-    <tr>
-      <th>data</th>
-      <td><p>A data frame that contains the dependent and independent
-variables.</p></td>
-    </tr>
-    <tr>
-      <th>p_adj</th>
-      <td><p>The p-value adjustment method (see Description).</p></td>
-    </tr>
-    </table>
+    <pre class="usage"><span class='va'>ansur</span></pre>
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>data_df</span> <span class='op'>&lt;-</span> <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span><span class='va'>vizverb</span>, IV <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/interaction.html'>interaction</a></span><span class='op'>(</span><span class='va'>task</span>, <span class='va'>response</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>pairwise_t_test</span><span class='op'>(</span><span class='va'>time</span> <span class='op'>~</span> <span class='va'>IV</span>, data <span class='op'>=</span> <span class='va'>data_df</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt; 	Pairwise comparisons using t tests with pooled SD 
-#&gt; 
-#&gt; data:  y and x 
-#&gt; 
-#&gt;               verbal.verbal visual.verbal verbal.visual
-#&gt; visual.verbal 0.0790        -             -            
-#&gt; verbal.visual 1.0000        0.0166        -            
-#&gt; visual.visual 0.0044        2.9e-07       0.0241       
-#&gt; 
-#&gt; P value adjustment method: bonferroni </div><div class='input'>
-</div></pre>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame with 6068 observations from 9 variables.</p><dl>
+<dt>subjectid</dt><dd><p>Unique ID of the person</p></dd>
+<dt>gender</dt><dd><p>Binary variable indicating the subject's sex: <code>male</code> or <code>female</code>.</p></dd>
+<dt>height</dt><dd><p>Height in centimeters.</p></dd>
+<dt>weight</dt><dd><p>Weight in kilograms.</p></dd>
+<dt>handedness</dt><dd><p>Categorical variable indicating if the person is left, or right handed, or both.</p></dd>
+<dt>age</dt><dd><p>Age in years</p></dd>
+<dt>race</dt><dd><p>Race, with categories like <code>white</code>, <code>black</code>, <code>hispanic</code>.</p></dd>
+<dt>height_tercile</dt><dd><p>The tercile of the person's height.</p></dd>
+<dt>age_tercile</dt><dd><p>The tercile of the person's weight.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>This data is a transformed version of data sets obtained the <a href='https://www.openlab.psu.edu/ansur2'>Anthropometric Survey of US Army Personnel (ANSUR 2 or ANSUR II)</a>.</p>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -90,7 +90,7 @@ corresponds to a sufficiently large set of y values." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">psyntur</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
 
@@ -161,15 +161,15 @@ should have relatively few unique values, so that each value of <code>x</code>
 corresponds to a sufficiently large set of <code>y</code> values.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>tukeyboxplot</span>(
-  <span class='kw'>y</span>,
-  <span class='kw'>x</span>,
-  <span class='kw'>data</span>,
-  by = <span class='kw'>NULL</span>,
-  jitter = <span class='fl'>FALSE</span>,
-  box_width = <span class='fl'>1</span><span class='op'>/</span><span class='fl'>3</span>,
-  jitter_width = <span class='fl'>1</span><span class='op'>/</span><span class='fl'>5</span>
-)</pre>
+    <pre class="usage"><span class='fu'>tukeyboxplot</span><span class='op'>(</span>
+  <span class='va'>y</span>,
+  <span class='va'>x</span>,
+  <span class='va'>data</span>,
+  by <span class='op'>=</span> <span class='cn'>NULL</span>,
+  jitter <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  box_width <span class='op'>=</span> <span class='fl'>1</span><span class='op'>/</span><span class='fl'>3</span>,
+  jitter_width <span class='op'>=</span> <span class='fl'>1</span><span class='op'>/</span><span class='fl'>5</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -216,15 +216,15 @@ commands.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A single box-and-whisker plot</span>
-<span class='fu'>tukeyboxplot</span>(y = <span class='kw'>time</span>, data = <span class='kw'>vizverb</span>)
+<span class='fu'>tukeyboxplot</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>time</span>, data <span class='op'>=</span> <span class='va'>vizverb</span><span class='op'>)</span>
 </div><div class='img'><img src='tukeyboxplot-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># One box-and-whisker plot for each value of a categorical variable</span>
-<span class='fu'>tukeyboxplot</span>(y = <span class='kw'>time</span>, x = <span class='kw'>task</span>, data = <span class='kw'>vizverb</span>)
+<span class='fu'>tukeyboxplot</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>time</span>, x <span class='op'>=</span> <span class='va'>task</span>, data <span class='op'>=</span> <span class='va'>vizverb</span><span class='op'>)</span>
 </div><div class='img'><img src='tukeyboxplot-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># Box-and-whisker plots with jitters</span>
-<span class='fu'>tukeyboxplot</span>(y = <span class='kw'>time</span>, x = <span class='kw'>task</span>, data = <span class='kw'>vizverb</span>,  jitter = <span class='fl'>TRUE</span>)
+<span class='fu'>tukeyboxplot</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>time</span>, x <span class='op'>=</span> <span class='va'>task</span>, data <span class='op'>=</span> <span class='va'>vizverb</span>,  jitter <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='img'><img src='tukeyboxplot-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># `tukeyboxplot` can be used with a continuous numeric variable too</span>
-<span class='fu'>tukeyboxplot</span>(y = <span class='kw'>len</span>, x = <span class='kw'>dose</span>, data = <span class='kw'>ToothGrowth</span>)
-</div><div class='img'><img src='tukeyboxplot-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>tukeyboxplot</span>(y = <span class='kw'>len</span>, x = <span class='kw'>dose</span>, data = <span class='kw'>ToothGrowth</span>,
-             by = <span class='kw'>supp</span>, jitter = <span class='fl'>TRUE</span>, box_width = <span class='fl'>0.5</span>, jitter_width = <span class='fl'>1</span>)
+<span class='fu'>tukeyboxplot</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>len</span>, x <span class='op'>=</span> <span class='va'>dose</span>, data <span class='op'>=</span> <span class='va'>ToothGrowth</span><span class='op'>)</span>
+</div><div class='img'><img src='tukeyboxplot-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>tukeyboxplot</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>len</span>, x <span class='op'>=</span> <span class='va'>dose</span>, data <span class='op'>=</span> <span class='va'>ToothGrowth</span>,
+             by <span class='op'>=</span> <span class='va'>supp</span>, jitter <span class='op'>=</span> <span class='cn'>TRUE</span>, box_width <span class='op'>=</span> <span class='fl'>0.5</span>, jitter_width <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
 </div><div class='img'><img src='tukeyboxplot-5.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
